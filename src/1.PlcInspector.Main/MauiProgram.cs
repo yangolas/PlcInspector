@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using MudBlazor.Services;
 
 namespace _1.PlcInspector.Main
 {
@@ -14,6 +15,7 @@ namespace _1.PlcInspector.Main
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 });
 
+            builder.Services.AddMudServices();
             builder.Services.AddMauiBlazorWebView();
 
 #if DEBUG
