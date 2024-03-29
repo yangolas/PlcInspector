@@ -1,0 +1,35 @@
+@using System.Net.Http.Json
+@using _3.PlcInspector.Models
+
+<MudDataGrid T="AlmCrono" Items="@Elements.Take(1)">
+    <Columns>
+        <PropertyColumn Property="x => x.Campo1" Title="MyTitle1" IsEditable="false" />
+        <PropertyColumn Property="x => x.Campo2" Title="MyTitle2" />
+        <PropertyColumn Property="x => x.Campo3" Title="MyTitle3" />
+        <PropertyColumn Property="x => x.Campo4" Title="MyTitle4" />
+    </Columns>
+</MudDataGrid>
+
+@code {
+    private IEnumerable<AlmCrono> Elements;
+    private bool _readOnly;
+    private bool _isCellEditMode;
+    private List<string> _events = new();
+    private bool _editTriggerRowClick;
+
+    public DataGridMud()
+    {
+        Elements = new List<AlmCrono>()
+        {
+            new AlmCrono()
+            {
+                Campo1 = "1",
+                Campo2 = "1",
+                Campo3 = "1",
+                Campo4 = "1",
+                Campo5 = "1",
+                Campo6 = "1"
+            }
+        };
+    }
+}

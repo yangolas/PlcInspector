@@ -65,4 +65,9 @@
         <PackageReference Include="MudBlazor" Version="6.16.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\2.PlcInspector.Domain\2.PlcInspector.Domain.csproj" />
+      <ProjectReference Include="..\3.PlcInspector.Models\3.PlcInspector.Models.csproj" />
+    </ItemGroup>
+
 </Project>
